@@ -22,3 +22,14 @@
 
 command1 = "switchport trunk allowed vlan 1,2,3,5,8"
 command2 = "switchport trunk allowed vlan 1,3,8,9"
+
+
+c1n = command1[30:].split(',')
+c2n = command2[30:].split(',')
+
+sc1n = set(c1n)
+sc2n = set(c2n)
+
+scun = sc1n.intersection(sc2n)
+result = sorted(scun)
+print(result)

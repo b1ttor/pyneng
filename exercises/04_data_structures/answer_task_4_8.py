@@ -24,19 +24,12 @@
 Это не значит, что задание сделано правильно, просто на данном этапе сложно иначе
 проверять результат.
 """
-
 ip = "192.168.3.1"
-ipbb = ip.split('.')
 
-ip1 = int(ipbb[0])
-ip2 = int(ipbb[1])
-ip3 = int(ipbb[2])
-ip4 = int(ipbb[3])
+octets = ip.split(".")
 
-ip1b = bin(ip1)[2:]
-ip2b = bin(ip2)[2:]
-ip3b = '000000' + bin(ip3)[2:]
-ip4b = '0000000' + bin(ip4)[2:]
+output = """
+{0:<10}{1:<10}{2:<10}{3:<10}
+{0:08b}  {1:08b}  {2:08b}  {3:08b}"""
 
-print('{:<10} {:<10} {:<10} {:<10}'.format(ip1, ip2, ip3, ip4))
-print('{:<10} {:<10} {:<10} {:<10}'.format(ip1b, ip2b, ip3b, ip4b))
+print(output.format(int(octets[0]), int(octets[1]), int(octets[2]), int(octets[3])))

@@ -53,7 +53,7 @@ london_co = {
 
 device = input('Введите имя устройства: ')
 dkey = london_co[device].keys()
-print(dkey)
-#parm = input('Введите имя параметра')
+dkeys = str(dkey)
+parm = input('Введите имя параметра' + ' ' + dkeys[10:] + ': ')
 
-#print(london_co[device][parm])
+print(london_co[device][parm])

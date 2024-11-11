@@ -48,6 +48,5 @@ london_co = {
 device = input('Введите имя устройства: ')
 dkey = london_co[device].keys()
 dkeys = str(dkey)
-parm = input('Введите имя параметра ' + dkeys[10:] + ': ')
-parml = parm.lower()
-print(london_co.get(device, {}).get(parml, 'Такого параметра нет'))
+parm = input('Введите имя параметра ' + dkeys[10:] + ': ').lower()
+print(london_co.get(device, {}).get(parm, 'Такого параметра нет'))
